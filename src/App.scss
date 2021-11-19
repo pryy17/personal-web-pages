@@ -1,0 +1,494 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+.App {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-left: 4em;
+  margin-right: 4em;
+
+}
+// smartphone
+@media screen and (max-width: 600px){
+  .judul {
+    height: auto;
+    font-size: 12px !important;
+    margin-top: 110px;
+
+  }
+
+  .sub-judul {
+    text-align: center !important;
+  }
+  
+  .header-container {
+    align-items: center !important;
+  }
+
+  .Photo-profil {
+    margin-left: 10% !important;
+    align-items: center !important;
+    
+  }
+  
+  .experience a {
+    text-align: center !important;
+  }
+
+  .experience {
+    margin-right: 0% !important;
+    text-align: center !important;
+  }
+  .profil-about {
+    text-align: center !important;
+    margin-top: 230px !important;
+    
+  }
+
+  .person {
+    width: auto !important;
+    object-fit: cover;
+    position: static !important;
+
+  }
+  .study-col2 {
+    margin-left: 4.5em !important;
+  }
+
+  .study-col1{
+  margin-left: 0 !important;
+  }
+
+  .study-col-head {
+    margin-left: 0 !important;
+  }
+}
+// smartphone
+
+button {
+  box-shadow: 4px 4px 4px #413f3f;
+}
+
+body {
+  background: linear-gradient(#439cef, #8cd3ff); 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  background-color: #439cef;
+  opacity: 80%;
+}
+
+.navbar a {
+  margin-left: 10px;
+}
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show > .nav-link {
+  color: white !important;
+  border-bottom: 2px solid white ;
+}
+// Header
+.judul {
+  width: 100%;
+  height: auto;
+  font-size: 25px;
+  margin-top: 110px;
+  text-align: left;
+  font-style: bold;
+
+}
+
+.contac {
+  margin-left: 0.5em;
+}
+
+.styles_container__3u7ry {
+  justify-content: left !important;
+}
+
+.sub-judul {
+  text-align: start;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 3px 4px #000000;
+  padding-left: 0.5em;
+}
+
+.styles_trailsText__ZCq0R{
+  height : 110px !important;
+}
+
+.person {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  right: 280px;
+  
+
+}
+.percom {
+  margin-top: 40px;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+.header-container {
+  margin-bottom: 110px;
+}
+// Header
+// share button
+
+$azure-radiance: #029dfc;
+$black: #000000;
+$concrete: #f2f2f2;
+$malibu: #639eff;
+$tundora: #464646;
+
+.c-share {
+  position: fixed;
+  left: 100em;
+  bottom: 20em;
+  width: 3.4375em;
+  height: 3.4375em;
+}
+
+.c-share__input {
+  display: none;
+
+  &:checked ~  {
+    .c-share__toggler .c-share__icon {
+      transition: 0s;
+      width: 0;
+      height: 0;
+      color: $malibu;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+
+    .c-share_options {
+      width: 11.0625em;
+      height: 12.5em;
+      border-radius: 0.3125em;
+
+      &::before,
+      li {
+        transition: 0.3s 0.15s;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.c-share__toggler,
+.c-share_options {
+  position: absolute;
+  right: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  background-color: $concrete;
+}
+
+.c-share__toggler {
+  cursor: pointer;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-share__icon {
+  position: relative;
+  left: -0.3125em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  color: $azure-radiance;
+  background-color: currentColor;
+  box-shadow: 0.625em -0.625em, 0.625em 0.625em;
+  transition: 0.1s 0.05s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 0.125em;
+    background-color: currentColor;
+    transition: 0.1s;
+  }
+
+  &::before {
+    top: 0.1875em;
+    left: 0.1875em;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: -0.125em;
+    left: 0.03125em;
+    transform-origin: center;
+    transform: rotate(-45deg);
+  }
+}
+
+.c-share_options {
+  list-style: none;
+  margin: 0;
+  padding: 1.0625em 1.25em;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 0 0.125em 0.125em rgba($black, 0.3);
+
+  &::before {
+    content: attr(data-title);
+    display: block;
+    margin-bottom: 1.25em;
+    font-weight: 700;
+  }
+
+  li {
+    font-size: 0.875em;
+    color: $tundora;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 0.75em;
+    }
+  }
+
+  &::before,
+  li {
+    opacity: 0;
+    transform: translateY(0.625em);
+    transition: 0s;
+  }
+  li:hover {
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  
+}
+
+// share button
+// About
+.about-container {
+  padding-bottom: 280px;
+  text-shadow: 2px 3px 4px #000000;
+  color: white;
+}
+.Photo-profil {
+  margin-left: 50%;
+  margin-top: 80px;
+  
+}
+
+.profil-about {
+  text-shadow: 2px 3px 4px #000000;
+  color: white;
+  margin-top: 80px;
+  
+}
+.experience a {
+  text-align: left;
+}
+.experience {
+  text-align: left;
+  margin-right: 50%;
+  margin-top: 10px;
+}
+
+.experience strong {
+  font-size: 40px;
+  
+}
+// about
+// skills
+
+.details{
+  width: 100%;
+  display: flex;  
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.bar{
+  position: relative;
+
+  border: 2px solid #0d96e0;
+
+  border-radius: 20px;
+
+}
+.bar div{
+  position: relative;
+  width: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #0d96e0;
+
+
+}
+
+.skills:not(:last-child){
+  margin-bottom: 30px;
+}
+
+#html-bar{
+  animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+  100%{
+      width: 90%;
+  }
+}
+
+#css-bar{
+  animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+  100%{
+      width: 75%;
+  }
+}
+
+#javascript-bar{
+  animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+  100%{
+      width: 72%;
+  }
+}
+
+#jQuery-bar{
+  animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill{
+  100%{
+      width: 58%;
+  }
+} 
+
+.skills-title {
+  margin-bottom: 6em;
+  text-align: center;
+  text-shadow: 2px 3px 4px #000000;
+  color: white;
+}
+
+.button-skills {
+  margin-bottom: 2em;
+}
+
+.btn-primary {
+  background: rgb(248, 213, 219);
+  border-color: transparent;
+  color: rgb(128, 121, 121);
+  text-align: left;
+  border-radius: 25px;
+}
+
+.skills-container {
+  text-align: left;
+  margin-bottom: 20em;
+  margin-left: auto;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-right: auto;
+  background: linear-gradient(rgb(228, 197, 202), #81c2eb);
+  border-color: transparent;
+  border-radius: 50px;
+  padding-bottom: 10em;
+}
+
+.modal-header {
+  padding-left: auto;
+}
+
+// skills
+// qualification
+
+.study-row {
+  border-right: solid blue 5px;
+  border-radius: 5px;
+
+}
+.study-col2 {
+  margin-left: 10%;
+  margin-top: 11.5em;
+}
+
+.study-col-head {
+  margin-left: 40%
+}
+.study-col1 {
+  margin-top: 15em;
+  margin-left: 40%;
+}
+
+.judul-qualification {
+  text-align: center;
+  margin-bottom: 5em;
+  font-size: 40px ;
+}
+
+.container-circle {
+  position: relative;
+  left: 48.3%;
+  bottom: 26em;
+  color: #0b527e;
+}
+
+.circle {
+  margin-bottom: 10em;
+}
+
+// qualification
